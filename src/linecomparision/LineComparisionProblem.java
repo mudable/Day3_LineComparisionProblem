@@ -21,15 +21,21 @@ public class LineComparisionProblem {
 		b2 = sc.nextDouble();
 		double line1 = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 		System.out.println("The length of line1 is:" + line1);
+		String x = Double.toString(line1);
 
 		double line2 = Math.sqrt((a2 - a1) * (a2 - a1) + (b2 - b1) * (b2 - b1));
 		System.out.println("The length of lin2 is:" + line2);
+		String y = Double.toString(line2);
+		int comp = x.compareTo(y);
 
-		if (line1 == line2)
-			System.out.println("Line1 and Line2 both are equal ");
-		else
-			System.out.println("Line1 and Line2 both are not equal ");
+		if (comp == 0) {
+			System.out.println("Lines are equal");
+		} else if (line1 <= line2) {
+			System.out.println("Line1 is smaller than line2");
+		} else {
 
+			System.out.println("Line1 is greater than line2");
+		}
 	}
 
 }
